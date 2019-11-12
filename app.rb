@@ -15,8 +15,8 @@ get '/' do
       settings.sockets << ws
     end
 
-    ws.onmessage do |msg|
-      settings.offer.columns[1] << settings.offer.applications[0]
+    ws.onmessage do |params|
+      Router.new({ offer: settings.offer }.merge(params)).handle
       EM.next_tick { settings.sockets.each{|s| s.send(settings.offer.render) } }
     end
     
