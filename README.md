@@ -1,9 +1,18 @@
 Here is the back-end of the WTTJ test.
 
-## Installation
+## Running
 
 ```bash
 bundle
 
 ruby app.rb
+```
+
+## Testing
+
+```bash
+bundle
+
+rake
+```
 ```
