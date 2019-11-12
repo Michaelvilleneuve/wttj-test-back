@@ -16,7 +16,7 @@ get '/' do
     end
 
     ws.onmessage do |params|
-      Router.new({ offer: settings.offer }.merge(params)).handle
+      Router.new({ offer: settings.offer }.merge(JSON.parse(params))).handle
       EM.next_tick { settings.sockets.each{|s| s.send(settings.offer.render) } }
     end
     
