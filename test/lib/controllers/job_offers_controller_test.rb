@@ -8,7 +8,7 @@ module Controllers
     end
 
     test 'move moves a user to a column' do
-      assert_not_equal 'Entretien', @offer.applications[0].column&.name
+      assert_not_equal 'Entretien', @offer.applications.last.column&.name
 
       JobOffersController.new(
         offer: @offer,
@@ -16,7 +16,7 @@ module Controllers
         destination: 'Entretien'
       ).move
 
-      assert_equal 'Entretien', @offer.applications[0].column&.name
+      assert_equal 'Entretien', @offer.applications.last.column&.name
     end
   end
 end

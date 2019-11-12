@@ -7,7 +7,7 @@ class SeedTest < TestHelper
   end
 
   test 'process creates default basic database' do
-    assert_equal 1, @offer.applications.size
+    assert @offer.applications.size >= 1
     assert_equal 'Steve Jobs', @offer.applications[0].user.first_name
     assert_equal 'À rencontrer', @offer.applications[0].column.name
   end
