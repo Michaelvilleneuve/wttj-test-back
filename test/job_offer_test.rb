@@ -30,14 +30,4 @@ class JobOfferTest < TestHelper
     assert_not offer.applications_in('Entretien').include?(application) 
     assert_equal [], offer.applications_in('Coucou lol')
   end
-
-  test 'to_json serializes all the job offer informations as json' do
-    offer = Seed.process
-
-    assert_nothing_raised do
-      hash = JSON.parse(offer.to_json)
-
-      assert_equal 'Stage - Account Manager', hash['name']
-    end
-  end
 end
