@@ -7,8 +7,9 @@ class Column
   end
 
   def insert(application, index = 0)
+    remove(application)
     application.move_to(self)
-    @applications.insert(index, application) unless @applications.include?(application)
+    @applications.insert(index, application)
     application
   end
 
