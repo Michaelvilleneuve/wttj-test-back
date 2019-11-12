@@ -41,4 +41,11 @@ class ColumnTest < TestHelper
     column << @application
     assert_equal 1, column.size
   end
+
+  test 'remove removes an element from a column' do
+    @column << @application
+
+    @column.remove(@application)
+    assert_not @column.applications.include?(@application)
+  end
 end

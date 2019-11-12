@@ -10,8 +10,7 @@ class JobOffer
   end
 
   def apply(user)
-    @columns[0] << application = JobApplication.new(user, self)
-    application
+    @columns[0] << JobApplication.new(user, self)
   end
 
   def applications
@@ -21,5 +20,9 @@ class JobOffer
   def applications_in(column_name)
     column = @columns.find { |column| column.name === column_name }
     column&.applications || []
+  end
+
+  def render
+    Mappers::JobOfferMapper.with(self, rootless: true).to_json
   end
 end

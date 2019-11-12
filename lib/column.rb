@@ -7,8 +7,13 @@ class Column
   end
 
   def <<(application)
-    @applications << application unless @applications.include?(application)
     application.move_to(self)
+    @applications << application unless @applications.include?(application)
+    application
+  end
+
+  def remove(application_to_delete)
+    @applications.delete_if { |a| a == application_to_delete }
   end
 
   def size
