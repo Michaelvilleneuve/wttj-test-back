@@ -1,17 +1,6 @@
-ENV['APP_ENV'] = 'test'
+require_relative 'test_helper'
 
-require 'rack/test'
-require 'minitest/autorun'
-require 'active_support'
-require_relative '../app'
-
-class AppTest < ActiveSupport::TestCase
-  include Rack::Test::Methods
-
-  def app
-    ::Sinatra::Application
-  end
-
+class AppTest < TestHelper
   test 'attempts to create a websocket connection' do
     assert_raises SinatraWebsocket::Error::ConnectionError do
       get '/'
