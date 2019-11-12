@@ -14,5 +14,4 @@ ruby app.rb
 bundle
 
 rake
-```
 ```
