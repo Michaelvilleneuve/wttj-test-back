@@ -10,7 +10,7 @@ class JobOffer
   end
 
   def apply(user)
-    @columns[0] << JobApplication.new(user, self)
+    @columns[0].insert(JobApplication.new(user, self))
   end
 
   def applications

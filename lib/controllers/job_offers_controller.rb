@@ -9,7 +9,7 @@ module Controllers
       destination = @offer.columns.find { |c| c.name == @params[:destination] }
       application = @offer.applications.find { |a| a.user.first_name == @params[:user] }
       
-      destination << application
+      destination.insert(application, @params[:index] || 0)
     end
   end
 end

@@ -6,9 +6,9 @@ class Column
     @applications = []
   end
 
-  def <<(application)
+  def insert(application, index = 0)
     application.move_to(self)
-    @applications << application unless @applications.include?(application)
+    @applications.insert(index, application) unless @applications.include?(application)
     application
   end
 
