@@ -18,9 +18,9 @@ class RouterTest < TestHelper
 
   test 'handle calls correct method with correct params' do
     params = {
-      controller: 'JobOffers',
-      action: 'coucou',
-      some: 'param'
+      'controller' => 'JobOffers',
+      'action' => 'coucou',
+      'some' => 'param'
     }
     stub = Controllers::JobOffersController.new(params)
 
