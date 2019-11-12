@@ -1,5 +1,5 @@
-require_relative 'test_helper'
-require_relative '../lib/user'
+require_relative '../../test_helper'
+require_relative '../../../lib/models/user'
 
 class UserTest < TestHelper
   setup do

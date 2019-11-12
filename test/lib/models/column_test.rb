@@ -1,5 +1,4 @@
-require_relative 'test_helper'
-require_relative '../lib/column'
+require_relative '../../test_helper'
 
 class ColumnTest < TestHelper
   setup do

@@ -1,5 +1,5 @@
-require_relative 'test_helper'
-require_relative '../lib/job_application'
+require_relative '../../test_helper'
+require_relative '../../../lib/models/job_application'
 
 class JobApplicationTest < TestHelper
   setup do

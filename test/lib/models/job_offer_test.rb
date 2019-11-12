@@ -1,6 +1,6 @@
-require_relative 'test_helper'
-require_relative '../lib/job_offer'
-require_relative '../lib/seed'
+require_relative '../../test_helper'
+require_relative '../../../lib/models/job_offer'
+require_relative '../../../lib/seed'
 
 class JobOfferTest < TestHelper
   test 'creating a job offer automatically creates default columns' do

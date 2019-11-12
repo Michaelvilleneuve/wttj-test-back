@@ -1,5 +1,5 @@
-require_relative 'test_helper'
-require_relative '../lib/seed'
+require_relative '../test_helper'
+require_relative '../../lib/seed'
 
 class SeedTest < TestHelper
   setup do
