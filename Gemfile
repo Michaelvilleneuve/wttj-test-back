@@ -4,10 +4,11 @@ gem 'sinatra'
 gem 'sinatra-websocket'
 
 gem 'active_mappers'
+gem 'activesupport'
 
 
 group :test do
-  gem 'activesupport'
   gem 'rack-test'
   gem 'rake'
+  gem 'mocha'
 end

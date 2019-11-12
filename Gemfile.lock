@@ -67,6 +67,7 @@ PLATFORMS
 DEPENDENCIES
   active_mappers
   activesupport
+  mocha
   rack-test
   rake
   sinatra
